@@ -10,21 +10,6 @@
   font-weight: 400;
 }
 
-//@mixin placeholder {
-//  &::-webkit-input-placeholder {
-//    @content;
-//  }
-//  &:-moz-placeholder {
-//    @content;
-//  }
-//  &::-moz-placeholder {
-//    @content;
-//  }
-//  &:-ms-input-placeholder {
-//    @content;
-//  }
-//}
-//
 *, *:before, *:after {
   box-sizing: border-box;
 }
@@ -131,7 +116,7 @@ body {
           color: $grey;
         }
       }
-      .search-icon a{
+      .search-icon a {
         position: relative;
         left: 28%;
         .fa-search {
@@ -142,7 +127,7 @@ body {
           transform: rotate(45deg);
         }
       }
-      .setting-user a{
+      .setting-user a {
         position: relative;
         left: 60%;
       }
@@ -251,94 +236,100 @@ body {
       }
     }
   }
-  .chat {
-    position: relative;
-    display: none;
-    overflow: hidden;
-    padding: 0 75px 11px 65px;
-    border-width: 1px 1px 1px 0;
-    border-style: solid;
-    border-color: #e6e6e6;
-    height: calc(100% - 114px);
-    justify-content: flex-end;
-    flex-direction: column;
-    &.active-chat {
-      display: block;
-      display: flex;
-      background: $bg-fon;
-    }
-    .conversation-start {
+  .chat-container {
+    width: 100%;
+    height: 81%;
+    overflow-y: hidden;
+    .chat {
       position: relative;
-      width: 100%;
-      margin-bottom: 27px;
-      text-align: center;
-      span {
-        font-size: 14px;
-        display: inline-block;
-        color: $grey;
-        &:before, &:after {
-          position: absolute;
-          top: 10px;
+      display: none;
+      overflow: hidden;
+      padding: 0 75px 11px 65px;
+      border-width: 1px 1px 1px 0;
+      border-style: solid;
+      border-color: #e6e6e6;
+      height: calc(100% - 114px);
+      justify-content: flex-end;
+      flex-direction: column;
+      &.active-chat {
+        display: block;
+        display: flex;
+        background: $bg-fon;
+      }
+      .conversation-start {
+        position: relative;
+        width: 100%;
+        margin-bottom: 27px;
+        text-align: center;
+        span {
+          font-size: 14px;
           display: inline-block;
-          width: 30%;
-          height: 1px;
-          content: '';
-          background-color: $grey;
+          color: $grey;
+          &:before, &:after {
+            position: absolute;
+            top: 10px;
+            display: inline-block;
+            width: 30%;
+            height: 1px;
+            content: '';
+            background-color: $grey;
+          }
+          &:before {
+            left: 0;
+          }
+          &:after {
+            right: 0;
+          }
         }
-        &:before {
-          left: 0;
+      }
+      .left-messages {
+        img {
+          position: absolute;
+          left: 11px;
+          border-radius: 50%;
         }
-        &:after {
-          right: 0;
+        .name {
+          font-size: 14px;
+          line-height: 22px;
+          color: $name;
+          font-family: 'Source Sans Pro', sans-serif;
+          font-weight: 600;
+          float: left;
+        }
+        .time {
+          font-size: 14px;
+          top: 16px;
+          right: 10%;
+          padding: 2px 0 5px 5px;
+          color: $grey;
+          float: left;
         }
       }
-    }
-    .left-messages {
-      img {
-        position: absolute;
-        left: 11px;
-        border-radius: 50%;
-      }
-      .name {
-        font-size: 14px;
-        line-height: 22px;
-        color: $name;
-        font-family: 'Source Sans Pro', sans-serif;
-        font-weight: 600;
-        float: left;
-      }
-      .time {
-        font-size: 14px;
-        top: 16px;
-        right: 10%;
-        padding: 0 0 5px 5px;
-        color: $grey;
-      }
-    }
-    .right-messages {
-      img {
-        position: absolute;
-        right: 11px;
-        border-radius: 50%;
-      }
-      .name {
-        font-size: 14px;
-        line-height: 22px;
-        color: $name;
-        font-family: 'Source Sans Pro', sans-serif;
-        font-weight: 600;
-        float: right;
-      }
-      .time {
-        font-size: 14px;
-        top: 16px;
-        float: right;
-        padding: 1px 0 5px 5px;
-        color: $grey;
+      .right-messages {
+        img {
+          position: absolute;
+          right: 11px;
+          border-radius: 50%;
+          width: 48px;
+        }
+        .name {
+          font-size: 14px;
+          line-height: 22px;
+          color: $name;
+          font-family: 'Source Sans Pro', sans-serif;
+          font-weight: 600;
+          float: right;
+        }
+        .time {
+          font-size: 14px;
+          top: 16px;
+          float: right;
+          padding: 2px 0 5px 5px;
+          color: $grey;
+        }
       }
     }
   }
-
   .write {
     position: relative;
     border: 1px solid #e6e6e6;
