@@ -1,4 +1,4 @@
-# webpack-chat
+# webpack-chat -- Пока без webpack
 -html
 -scss
 -js(скоро будет)
