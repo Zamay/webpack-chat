@@ -29,11 +29,13 @@ body {
   height: 75%;
   transform: translate(-50%, -50%); }
   .container .left {
+    position: absolute;
     float: left;
     width: 33%;
     height: 100%;
     background-color: #261c46;
-    overflow-x: hidden; }
+    overflow-x: hidden;
+    z-index: -1; }
     .container .left::-webkit-scrollbar {
       width: 0; }
     .container .left {
@@ -43,7 +45,7 @@ body {
       padding-left: 0;
       position: relative;
       width: 100%;
-      padding: 12px 8% 16px;
+      padding: 12px 10% 16px;
       cursor: pointer;
       background-color: #261c46;
       cursor: default; }
@@ -75,34 +77,31 @@ body {
         text-overflow: ellipsis;
         color: #8b8da9; }
     .container .left .setting {
-      width: 60%;
+      width: 75%;
       margin: 0 auto; }
       .container .left .setting div {
         display: inline-block;
-        width: 32%; }
+        width: 23%; }
         .container .left .setting div a {
-          font-size: 26px;
+          font-size: 24px;
           color: #8b8da9; }
+      .container .left .setting .new-messages a {
+        left: 10px;
+        position: relative; }
       .container .left .setting .search-icon a {
-        position: relative;
-        left: 28%; }
-        .container .left .setting .search-icon a .fa-search {
-          -moz-transform: rotate(45deg);
-          /* ╨Ф╨╗╤П Firefox */
-          -ms-transform: rotate(45deg);
-          /* ╨Ф╨╗╤П IE */
-          -webkit-transform: rotate(45deg);
-          /* ╨Ф╨╗╤П Safari, Chrome, iOS */
-          -o-transform: rotate(45deg);
-          /* ╨Ф╨╗╤П Opera */
-          transform: rotate(45deg); }
+        left: 20px;
+        position: relative; }
       .container .left .setting .setting-user a {
         position: relative;
-        left: 60%; }
+        left: 30px; }
+      .container .left .setting .compress {
+        display: none;
+        float: left; }
     .container .left .search {
       position: relative;
       width: 100%;
-      padding: 29px 29px 0; }
+      padding: 29px 29px 0;
+      display: none; }
     .container .left input {
       width: 100%;
       height: 20px;
@@ -173,9 +172,10 @@ body {
 
 .right {
   position: relative;
-  float: left;
-  width: 66%;
-  height: 100%; }
+  float: right;
+  width: 67%;
+  height: 100%;
+  overflow-x: hidden; }
   .right .top {
     width: 100%;
     height: 47px;
@@ -190,23 +190,20 @@ body {
         font-weight: 600; }
   .right .chat-container {
     width: 100%;
-    height: 81%;
-    overflow-y: hidden; }
+    height: 81%; }
     .right .chat-container .chat {
       position: relative;
       display: none;
       overflow: hidden;
-      padding: 0 75px 11px 65px;
-      border-width: 1px 1px 1px 0;
-      border-style: solid;
-      border-color: #e6e6e6;
-      height: calc(100% - 114px);
+      padding: 0 85px 11px 85px;
+      height: 486px;
       justify-content: flex-end;
       flex-direction: column; }
       .right .chat-container .chat.active-chat {
-        display: block;
         display: flex;
         background: #ebeafd; }
+      .right .chat-container .chat.heid {
+        height: 552px; }
       .right .chat-container .chat .conversation-start {
         position: relative;
         width: 100%;
@@ -230,8 +227,9 @@ body {
             right: 0; }
       .right .chat-container .chat .left-messages img {
         position: absolute;
-        left: 11px;
-        border-radius: 50%; }
+        left: 22px;
+        border-radius: 50%;
+        width: 48px; }
       .right .chat-container .chat .left-messages .name {
         font-size: 14px;
         line-height: 22px;
@@ -248,7 +246,7 @@ body {
         float: left; }
       .right .chat-container .chat .right-messages img {
         position: absolute;
-        right: 11px;
+        right: 22px;
         border-radius: 50%;
         width: 48px; }
       .right .chat-container .chat .right-messages .name {
@@ -336,5 +334,8 @@ body {
         border-radius: 20px 0 20px 20px;
         -moz-border-radius: 20px 0 20px 20px;
         -khtml-border-radius: 20px 0 20px 20px; }
+
+.add-width {
+  width: 91%; }
 
 /*# sourceMappingURL=style.css.map */
