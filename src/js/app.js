@@ -16,6 +16,8 @@ window.onload = function () {
             $(this).addClass('active');
             $('.chat[data-chat = ' + findChat + ']').addClass('active-chat');
         }
+
+        return false;
     });
 
     $(document).on('click', '.setting-user a', function () {
@@ -31,11 +33,14 @@ window.onload = function () {
             $('.chat[data-chat = ' + findChat + ']').addClass('active-chat heid');
 
         }
+
+        return false;
     });
 
     $(document).on('click', '.search-icon a', function () {
         $('.search').toggle();
 
+        return false;
     });
 
     $(document).on('click', '.expand a', function () {
@@ -51,5 +56,7 @@ window.onload = function () {
         $('.right').toggleClass('add-width');
         return false;
     });
+
+    return false;
 
 }
